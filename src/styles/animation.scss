@@ -1,0 +1,129 @@
+.dropDown {
+  transform-origin: top;
+  animation-name: dropDown;
+  animation-duration: 250ms;
+  animation-fill-mode: forwards;
+}
+
+.dropUp {
+  transform-origin: top;
+  animation-name: dropUp;
+  animation-duration: 250ms;
+  animation-fill-mode: forwards;
+}
+
+@keyframes dropDown {
+  from {
+    transform: translateY(0) scaleY(0);
+  }
+  to {
+    transform: translateY(0) scaleY(1);
+  }
+}
+
+@keyframes dropUp {
+  from {
+    transform: translateY(0) scaleY(1);
+  }
+  to {
+    transform: translateY(0) scaleY(0);
+  }
+}
+
+.slideDown {
+  transform-origin: top;
+  animation-name: slideDown;
+  animation-duration: 250ms;
+  animation-fill-mode: forwards;
+}
+
+.slideUp {
+  transform-origin: top;
+  animation-name: slideUp;
+  animation-duration: 250ms;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-50%) scaleY(0);
+  }
+  to {
+    transform: translateY(0) scaleY(1);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(0) scaleY(1);
+  }
+  to {
+    transform: translateY(-50%) scaleY(0);
+  }
+}
+
+.slideOpenRight {
+  transform-origin: left;
+  animation-name: slideOpenRight;
+  animation-duration: $time-nav-anim;
+  // animation-timing-function: linear;
+  // animation-delay: 0ms;
+  // animation-iteration-count: infinite;
+  // animation-direction: normal;
+  animation-fill-mode: forwards;
+  // animation-play-state: running;
+}
+
+.slideCloseRight {
+  transform-origin: left;
+  animation-name: slideCloseRight;
+  animation-duration: $time-nav-anim;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slideOpenRight {
+  from {
+    transform: translateX(100%) scaleX(0);
+  }
+  to {
+    transform: translateX(0) scaleX(1);
+  }
+}
+
+@keyframes slideCloseRight {
+  from {
+    transform: translateX(0) scaleX(1);
+  }
+  to {
+    transform: translateX(100%) scaleX(0);
+  }
+}
+
+.visible {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.invisible {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.pulse {
+  transform-origin: center;
+  animation-name: pulse;
+  animation-duration: 750ms;
+  // animation-timing-function: linear;
+  // animation-delay: 0ms;
+  animation-iteration-count: infinite;
+  // animation-direction: normal;
+  animation-fill-mode: forwards;
+  // animation-play-state: running;
+}
+
+@keyframes pulse {
+  50% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

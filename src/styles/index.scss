@@ -1,0 +1,156 @@
+@import "variables.scss";
+@import "fonts.scss";
+@import "init.scss";
+@import "animation.scss";
+@import "elements.scss";
+
+.header {
+  position: relative;
+  height: 70px;
+  background-color: $color-yellow;
+  z-index: 5;
+}
+
+.section {
+  padding-top: 46px;
+  padding-left: 122px;
+  padding-right: 122px;
+  padding-bottom: 27px;
+
+  @media (max-width: $bp-medium) {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+
+  @media (max-width: $bp-small) {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  &__title {
+    font-size: 36px;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  &__handler {
+    margin-top: 32px;
+  }
+
+  &__slider {
+  }
+}
+
+.section-last-minute-tours {
+
+  @media (max-width: $bp-small) {
+    padding-top: 38px;
+  }
+
+  .section__slider {
+    padding-top: 17px;
+  }
+  .slick-next, .slick-prev {
+    top: calc(50% - 30px);
+  }
+}
+
+.section-popular-tours {
+
+  @media (max-width: $bp-small) {
+    padding-top: 16px;
+  }
+
+  .section__slider {
+    margin-top: 46px;
+
+    @media (max-width: $bp-small) {
+      margin-top: 31px;
+      border-bottom: 2px solid #C4C4C4;
+      padding-bottom: 16px;
+    }
+  }
+  .slick-next, .slick-prev {
+    top: calc(50% - 24px);
+  }
+}
+
+.section-form {
+  padding-top: 87px;
+  padding-bottom: 40px;
+
+  @media (max-width: $bp-small) {
+    padding-top: 11px;
+  }
+
+    &__title {
+      font-size: 36px;
+      font-weight: 900;
+      text-align: center;
+
+      @media (max-width: $bp-small) {
+        text-align: left;
+      }
+    }
+
+    &__form {
+      margin-top: 28px;
+
+      @media (max-width: $bp-small) {
+        text-align: left;
+        margin-top: 0;
+      }
+    }
+}
+
+.footer {
+  background: #272727;
+  margin-left: 7.91015625%;
+  font-size: 24px;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  color: white;
+  border-top: 2px solid white;
+  border-left: 2px solid white;
+
+  @media (max-width: $bp-small) {
+    margin-left: 0;
+    border-left: none;
+  }
+
+  &__top,
+  &__bottom {
+    position: relative;
+    padding-left: 120px;
+
+    @media (max-width: $bp-small) {
+      padding-left: 62px;
+    }
+  }
+
+  &__top::after,
+  &__bottom::after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background: url("../img/footer-stroke.svg");
+    background-repeat: no-repeat;
+    background-size: 929px 100%;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__bottom::after {
+    transform: scale(1, -1);
+  }
+
+  &__middle {
+    height: 60px;
+  }
+
+  &__link {
+    padding: 20px 0;
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "name": "dk_popup",
+  "version": "1.0.0",
+  "description": "класс всплывающего окна",
+  "main": "index.js",
+  "scripts": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DarthDanius/dk_Libs/tree/master/dk_lib"
+  },
+  "keywords": [
+    "dk"
+  ],
+  "author": "Danil Karchuganov",
+  "license": "ISC",
+  "devDependencies": {
+    "jquery.maskedinput": "^1.4.1"
+  }
+}

@@ -1,0 +1,37 @@
+@import "variables.scss";
+
+$slick-font-path: $public-path + '/fonts/' !default;
+$slick-loader-path: $public-path + '/' !default;
+
+@import '~slick-carousel/slick/slick.scss';
+@import '~slick-carousel/slick/slick-theme.scss';
+@import '../scripts/dk_dropDownList/index.scss';
+@import '~simplebar/dist/simplebar.css';
+
+.slick-list {
+  .slick-loading & {
+    background: #fff slick-image-url("../img/ajax-loader.gif") center center no-repeat;
+  }
+}
+
+.slick-next::before {
+  content: url('../img/arrow.svg');
+}
+
+.slick-prev::before {
+  content: url('../img/arrow.svg');
+}
+
+.slick-next, .slick-prev {
+  width: 10px;
+  height: 22px;
+}
+
+.slick-prev {
+  transform: rotate(180deg);
+  left: -54px;
+}
+
+.slick-next {
+  right: -54px;
+}

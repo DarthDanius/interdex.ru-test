@@ -1,0 +1,17 @@
+{
+  "name": "dk_toggle-hide-scroll",
+  "version": "1.0.0",
+  "description": "функция отключает вертикальный скролл элемента 'body'",
+  "main": "index.js",
+  "scripts": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DarthDanius/dk_Libs/tree/master/dk_lib"
+  },
+  "keywords": [
+    "dk"
+  ],
+  "author": "Danil Karchuganov",
+  "license": "ISC"
+}

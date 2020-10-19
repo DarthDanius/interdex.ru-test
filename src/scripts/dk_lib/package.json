@@ -1,0 +1,17 @@
+{
+  "name": "dk_lib",
+  "version": "1.0.0",
+  "description": "основная библиотека",
+  "main": "index.js",
+  "scripts": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DarthDanius/dk_Libs/tree/master/dk_lib"
+  },
+  "keywords": [
+    "dk"
+  ],
+  "author": "Danil Karchuganov",
+  "license": "ISC"
+}

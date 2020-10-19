@@ -1,0 +1,8 @@
+node_modules
+sftp.json
+.vscode
+"*.7z"
+"*.zip"
+package-lock.json
+design
+danius-test.ru

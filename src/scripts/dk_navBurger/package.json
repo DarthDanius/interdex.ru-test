@@ -1,0 +1,22 @@
+{
+  "name": "dk_nav-burger",
+  "version": "1.0.0",
+  "description": "библиотека для создания бургер-меню",
+  "main": "index.js",
+  "scripts": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DarthDanius/dk_Libs/tree/master/dk_lib"
+  },
+  "keywords": [
+    "dk"
+  ],
+  "author": "Danil Karchuganov",
+  "license": "ISC",
+  "dependencies": {
+    "dk_lib": "^1.0.0"
+  },
+  "devDependencies": {
+  }
+}

@@ -1,0 +1,189 @@
+doctype html
+html(lang='ru')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0, shrink-to-fit=no')
+    link(href='https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap' rel='stylesheet')
+    title interdex.ru test
+  body
+    .content
+      .container-fixed
+        header.header
+          .header__menu.menu(data-type='slide-menu-container')
+            .menu__container-fixed
+              button#btn-nav.menu__btn-nav.btn-nav
+                span.btn-nav__icon
+                  span.btn-nav__elem-1
+                  span.btn-nav__elem-2
+                  span.btn-nav__elem-3
+              .menu__container-position(data-type='slide-menu-content')
+                .menu__container-scroll
+                  .menu__container-content
+                    .menu__content
+                      form-menu.menu__form-menu.form-menu(action='#')
+                        .form-menu__container
+                          label.form-menu__label(for='countries') Страны
+                          select#countries.form-menu__input.form-menu__input_select(name='countries' data-input='select')
+                            optgroup.form-menu__group(label='Южная Америка')
+                              option.form-menu__option Аргентина
+                              option.form-menu__option Бразилия
+                              option.form-menu__option Перу
+                              option.form-menu__option Уругвай
+                              option.form-menu__option Чили
+                              option.form-menu__option Эквадор
+                            optgroup.form-menu__group(label='Северная Америка')
+                              option.form-menu__option Аргентина
+                              option.form-menu__option Бразилия
+                              option.form-menu__option Перу
+                              option.form-menu__option Уругвай
+                              option.form-menu__option Чили
+                              option.form-menu__option Эквадор
+                            optgroup.form-menu__group(label='Арктика и Антарктика')
+                              option.form-menu__option Аргентина
+                              option.form-menu__option Бразилия
+                              option.form-menu__option Перу
+                              option.form-menu__option Уругвай
+                              option.form-menu__option Чили
+                              option.form-menu__option Эквадор
+                            optgroup.form-menu__group(label='Африка')
+                              option.form-menu__option Аргентина
+                              option.form-menu__option Бразилия
+                              option.form-menu__option Перу
+                              option.form-menu__option Уругвай
+                              option.form-menu__option Чили
+                              option.form-menu__option Эквадор
+                            optgroup.form-menu__group(label='Австралия и Океания')
+                              option.form-menu__option Аргентина
+                              option.form-menu__option Бразилия
+                              option.form-menu__option Перу
+                              option.form-menu__option Уругвай
+                              option.form-menu__option Чили
+                              option.form-menu__option Эквадор
+                            optgroup.form-menu__group(label='Европа')
+                              option.form-menu__option Аргентина
+                              option.form-menu__option Бразилия
+                              option.form-menu__option Перу
+                              option.form-menu__option Уругвай
+                              option.form-menu__option Чили
+                              option.form-menu__option Эквадор
+                            optgroup.form-menu__group(label='Россия')
+                              option.form-menu__option Аргентина
+                              option.form-menu__option Бразилия
+                              option.form-menu__option Перу
+                              option.form-menu__option Уругвай
+                              option.form-menu__option Чили
+                              option.form-menu__option Эквадор
+                            optgroup.form-menu__group(label='Азия')
+                              option.form-menu__option Аргентина
+                              option.form-menu__option Бразилия
+                              option.form-menu__option Перу
+                              option.form-menu__option Уругвай
+                              option.form-menu__option Чили
+                              option.form-menu__option Эквадор
+                        .form-menu__container
+                          label.form-menu__label.hide(for='date-begin') Даты
+                          .form-menu__calendar
+                            input#date-begin.form-menu__input.form-menu__input_data(type='date' name='date-begin' data-input='date-begin')
+                            input#date-end.form-menu__input.form-menu__input_data.hide(type='date' name='date-end' data-input='date-end')
+                        .form-menu__container
+                          label.form-menu__label(for='type-of-travel') Тип путешествия
+                          select#type-of-travel.form-menu__input.form-menu__input_select(name='type-of-travel' data-input='select')
+                            option.form-menu__option Активный
+                            option.form-menu__option На авто
+                            option.form-menu__option На корабле
+                            option.form-menu__option Новый год
+                            option.form-menu__option Поход
+                            option.form-menu__option Серфинг
+                            option.form-menu__option Эксклюзив
+                            option.form-menu__option Экскурсионный
+                            option.form-menu__option Экспедиция
+                        button.form-menu__btn.menu__btn.btn.btn_border Найти
+                      nav.menu__nav.nav
+                        ul.nav__list
+                          li.nav__item ПУТЕШЕСТВИЯ
+                          li.nav__item О НАС
+                          li.nav__item ОТЗЫВЫ
+                          li.nav__item БЛОГ
+                      a.menu__link-tel(href='tel:+78001234567') 8 (800) 123-45-67
+                      button.menu__btn.btn.btn_border Подберите мне тур
+        section.section.section-last-minute-tours
+          h2.section__title Горящие туры
+          ul#handler-sort.section__handler.handler.hide
+          #slider-main.section__slider.slider.slider_main(data-slider='')
+          .section-last-minute-tours__content-mobile.content-mobile
+            .content-mobile__container
+              #content-mobile.content-mobile__content
+              button#load-more.content-mobile__btn.btn.btn_yellow Загрузить еще
+        section.section.section-popular-tours
+          h2.section__title Популярные туры
+          #slider-secondary.section__slider.slider.slider_secondary(data-slider='')
+        section.section.section-form
+          h2.section-form__title Заявка на подбор путешествия
+          form#form.section-form__form.form(action='#')
+            h3.form__title немного о вас
+            .form__container-row
+              .form__container
+                label.form__label(for='name') имя
+                input#name.form__input(type='text' name='name' required='')
+              .form__container
+                label.form__label(for='phone') телефон
+                input#phone.form__input(type='text' name='phone')
+            h3.form__title о путешествии
+            .form__container-row
+              .form__container
+                label.form__label(for='place') куда и когда хотите поехать?
+                input#place.form__input(type='text' name='place' required='')
+              .form__container
+                label.form__label(for='data') когда?
+                input#data.form__input(type='text' name='data')
+            .form__container-row
+              .form__container
+                h3.form__title удобный способ связи
+                .form__container-row
+                  .form__container-checkbox
+                    input#cb-viber.form__checkbox(type='checkbox' name='cb-viber')
+                    label.form__label.form__label_checkbox(for='cb-viber') viber
+                  .form__container-checkbox
+                    input#cb-whatsapp.form__checkbox(type='checkbox' name='cb-whatsapp')
+                    label.form__label.form__label_checkbox(for='cb-whatsapp') whatsapp
+                  .form__container-checkbox
+                    input#cb-mail.form__checkbox(type='checkbox' name='cb-mail')
+                    label.form__label.form__label_checkbox(for='cb-mail') почта
+                  .form__container-checkbox
+                    input#cb-phone.form__checkbox(type='checkbox' name='checkbox')
+                    label.form__label.form__label_checkbox(for='cb-phone') телефон
+              .form__container
+                h3.form__title откуда узнали о нас
+                .form__container-row
+                  .form__container-checkbox
+                    input#cb-internet.form__checkbox(type='checkbox' name='cb-internet')
+                    label.form__label.form__label_checkbox(for='cb-internet') интернет
+                  .form__container-checkbox
+                    input#cb-friends.form__checkbox(type='checkbox' name='cb-friends')
+                    label.form__label.form__label_checkbox(for='cb-friends') рекомендовали друзья
+                  .form__container-checkbox
+                    input#cb-social.form__checkbox(type='checkbox' name='cb-social')
+                    label.form__label.form__label_checkbox(for='cb-social') соц. сети
+                  .form__container-checkbox
+                    input#cb-experience.form__checkbox(type='checkbox' name='cb-experience')
+                    label.form__label.form__label_checkbox(for='cb-experience') уже ездил
+            .form__container-checkbox-small
+              input#cb-mailing.form__checkbox-small(type='checkbox' name='cb-mailing')
+              label.form__label.form__label_checkbox-small(for='cb-mailing') Получать свежие предложения по электронной почте
+              p.form__description
+                | Каждую неделю мы делаем для вас обзор лучших экспедиций, статей и лайфхаков для путешественников. Если вдруг вам не понравится, вы сможете отписаться в любой момент.
+            .form__container-checkbox-small
+              input#cb-consent.form__checkbox-small(type='checkbox' name='cb-consent' required='')
+              label.form__label.form__label_checkbox-small(for='cb-consent') С обработкой своих персональных данных согласен.
+              p.form__description Отправляя заявку я подтверждаю согласие с условиями Пользовательского соглашения
+            .form__container-checkbox-small
+              p.form__description
+                span.accent *
+                |  Поля, которые надо обязательно заполнить
+            button.form__btn-submit.btn.btn_yellow(type='submit') отправить
+        footer.footer
+          .footer__top
+            a.footer__link(href='tel:+78001234567') 8 (800) 123-45-67
+          .footer__middle
+          .footer__bottom
+            a.footer__link(href='tel:+78001234567') 8 (800) 123-45-67

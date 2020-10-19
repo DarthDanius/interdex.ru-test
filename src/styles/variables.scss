@@ -1,0 +1,89 @@
+$public-path: '..';
+
+$color-yellow :#FFD241;
+$color-accent: #CB0037;
+$color-success: green;// цвет фона
+$color-fail:  #CB0037;// цвет фона
+$color-disable: #CDCDCD;// цвет фона
+$color-text-light-01: white;// цвет светлого текста
+$color-text-dark-01: black;// цвет темного текста
+
+$pad-side-01: 100px;
+
+$pad-top-01: 100px;
+
+$time-hover: 250ms;
+$time-nav-anim: 250ms;
+$time-btn-nav: 200ms;
+
+// В исключительных случаях более 1200px (1440, 1600, 1920);
+// Extra large devices (large desktops, 1200px and up)
+// min-width: 1200px;
+// max-width: 1200px - 1;
+// Large devices (desktops, 992px and up)
+// max-width: 992px - 1;
+// Medium devices (tablets, 768px and up)
+// max-width: 768px - 1;
+// Small devices (landscape phones, 576px and up)
+// max-width: 576px - 1;
+// Extra small devices (portrait phones, less than 576px)
+// max-width: 480px - 1;
+
+$bp-extra-large: 1200px - 1;
+$bp-large: 992px - 1;
+$bp-medium: 768px - 1;
+$bp-small: 576px - 1;
+$bp-extra-small: 480px - 1;
+
+$breakpoint-burger: 700px;
+
+$line-height: 1.15;
+
+$root-font-size: 35px;
+$current-font-size: 35px;
+$base-font-size-em: $current-font-size / $root-font-size;
+
+@mixin transition-hover {
+  transition-property: background-color, box-shadow, border-color, outline-color;
+  transition-duration: $time-hover;
+}
+
+@mixin transition-link {
+  & {
+    position: relative;
+    text-decoration: none;
+  }
+
+  &:after {
+    display: block;
+    position: absolute;
+    display: block;
+    content: "";
+    height: 2px;
+    width: 0%;
+    margin-top: 2px;
+    transition-property: width, text-decoration, background-color;
+    transition-timing-function: ease-in-out;
+    transition-duration: $time-hover;
+    left: 0;
+    right: 0;
+    bottom: 2px;
+  }
+
+  body[data-touch="false"] &:hover:after,
+  &:focus:after,
+  &:active:after {
+    width: 100%;
+    background-color: $color-main-02;
+  }
+}
+
+@mixin transition-message {
+  transition-property: margin, height, line-height, opacity;
+  transition-duration: $time-slide;
+}
+
+@mixin transition-nav__btn {
+  transition-property: transform, opacity;
+  transition-duration: $time-btn-nav;
+}

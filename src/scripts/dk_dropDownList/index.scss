@@ -1,0 +1,143 @@
+.hide {
+  position: absolute !important;
+  left: -10000px !important;
+  height: 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  opacity: 0 !important;
+}
+
+.drop-down {
+  $button-height: 49px;
+  
+  height: $button-height;
+  position: relative;
+  white-space: nowrap;
+
+  &__button {
+    width: 100%;
+    height: $button-height;
+    background-repeat: no-repeat;
+    background-image: url(../img/icon_arrow.svg);
+    background-position: calc(100% - 15px) 50%;
+    border-radius: 24px;
+    background-size: 10px auto;
+    background-color: white;
+    text-align: start;
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 500;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-left: 30px;
+    padding-right: 30px;
+    transition-property: width, left;
+    transition-duration: $time-nav-anim;
+  }
+
+  &__list-container-position {
+    position: absolute;
+    height: $button-height;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: white;
+    border-radius: 24px;
+    transition-property: height, opacity, padding;
+    transition-duration: $time-nav-anim;
+    z-index: -1;
+  }
+
+  &__list-container-scroll {
+    height: 100%;
+    // overflow: hidden;
+
+    & > .simplebar-vertical {
+      right: 10px;
+    }
+  }
+
+  &__list * {
+    height: 0;
+  }
+
+  &__list {
+    opacity: 0;
+    white-space: normal;
+
+    & :last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__title {
+    font-size: 14px;
+    font-weight: 600;
+    cursor: default;
+  }
+
+  &__item {
+    cursor: pointer;
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: 300;
+
+    &:hover {
+      background-color: #EEEEEE;
+    }
+  }
+
+  &__scrollbar {
+    visibility: hidden;
+  }
+
+  &_open {
+
+    .drop-down__button {
+      z-index: 2;
+    }
+
+    .drop-down__list-container-position {
+      z-index: 1;
+    }
+
+    .drop-down__list-container-scroll {
+      overflow: auto;
+    }
+
+    .drop-down__list * {
+      height: auto;
+    }
+
+    .drop-down__list {
+      padding-left: 30px;
+      padding-right: 45px;
+      z-index: auto;
+    }
+
+    .drop-down__title {
+      margin-bottom: 8px;
+    }
+
+    .drop-down__item {
+      padding: 6px 13px;
+    }
+
+    // simplebar-scrollbar
+    // .simplebar-scrollbar::before {
+    //   // opacity: 1;
+    //   visibility: visible;
+    // }
+  }
+
+  &_scroll {
+
+    .drop-down__scrollbar {
+      visibility: visible;
+      background-color: #C4C4C4;
+      border-radius: 10px;
+      width: 2px;
+    }
+  }
+}
