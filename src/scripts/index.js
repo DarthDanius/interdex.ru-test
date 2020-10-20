@@ -23,8 +23,8 @@ const SLIDER_SYSTEM_OPTIONS_MAIN = {
     infinite: false,
     zIndex: 5,
     arrows: true,
-    accessibility: false,
-    draggable: false,
+    accessibility: true,
+    draggable: true,
     centerMode: false,
   },
   responsive: [
@@ -35,8 +35,7 @@ const SLIDER_SYSTEM_OPTIONS_MAIN = {
       },
       slick: {
         arrows: false,
-        accessibility: true,
-        draggable: true,
+        accessibility: false,
         centerMode: true,
       },
     },
@@ -53,8 +52,8 @@ const SLIDER_SYSTEM_OPTIONS_SECONDARY = {
     infinite: false,
     zIndex: 5,
     arrows: true,
-    accessibility: false,
-    draggable: false,
+    accessibility: true,
+    draggable: true,
     centerMode: false,
   },
   responsive: [
@@ -65,8 +64,7 @@ const SLIDER_SYSTEM_OPTIONS_SECONDARY = {
       },
       slick: {
         arrows: false,
-        accessibility: true,
-        draggable: true,
+        accessibility: false,
         centerMode: true,
         centerPadding: '39px',
       },
@@ -213,7 +211,7 @@ function formInit(setting={}) {
 }
 
 async function getJsonData() {
-  const url = '../data/countries.json';
+  const url = window.location + 'data/countries.json';
   let response = await fetch(url);
 
   if (response.ok) {

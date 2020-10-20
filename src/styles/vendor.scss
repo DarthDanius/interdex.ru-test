@@ -10,7 +10,7 @@ $slick-loader-path: $public-path + '/' !default;
 
 .slick-list {
   .slick-loading & {
-    background: #fff slick-image-url("../img/ajax-loader.gif") center center no-repeat;
+    background: #fff slick-image-url("../img/Spinner-1s-200px.svg") center center no-repeat;
   }
 }
 

@@ -1,8 +1,10 @@
 node_modules
 sftp.json
 .vscode
-"*.7z"
-"*.zip"
+*.7z
+*.zip
+*.rar
 package-lock.json
 design
-danius-test.ru
+info.txt
+.gitignore
